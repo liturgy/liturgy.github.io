@@ -6,7 +6,7 @@ $.routes({'/': function(){$('.wrap-main').load('sites/home.html',function(respon
         });
     $.ajax({
         url: 'sites/' + params.folder +
-        '/_aside_menu.html',
+        '/aside_menu.html',
         success: function(result){
             $('.wrap-aside' ).html(result);
             colorize();
@@ -34,7 +34,7 @@ $.routes({'/': function(){$('.wrap-main').load('sites/home.html',function(respon
         });
         $.ajax({
             url: 'sites/' + params.folder +
-            '/_aside_menu.html',
+            '/aside_menu.html',
             success: function(result){
                 $('.wrap-aside' ).html(result);
                 colorize();
@@ -63,7 +63,7 @@ $.routes({'/': function(){$('.wrap-main').load('sites/home.html',function(respon
         });
         $.ajax({
             url: 'sites/' + params.folder +
-            '/_aside_menu.html',
+            '/aside_menu.html',
             success: function(result){
                 $('.wrap-aside' ).html(result);
                 colorize();
