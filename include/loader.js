@@ -4,7 +4,7 @@ $.routes({'/': function(){$('.wrap-main').load('sites/home.html',function(respon
                 $('.wrap-main').load("404.html");
             }
         });
-        $(".wrap-aside").load('sites/' + params.folder + '/_aside_menu.html', function(response, status, xhr) {
+        $(".wrap-aside").load('sites/' + params.folder + '/aside_menu.html', function(response, status, xhr) {
             if(status == "error") {
                 $(".wrap-aside").html("");
             }
@@ -19,7 +19,7 @@ $.routes({'/': function(){$('.wrap-main').load('sites/home.html',function(respon
                 $('.wrap-main').load("404.html");
             }
         });
-        $(".wrap-aside").load('sites/' + params.folder + '/_aside_menu.html', function(response, status, xhr) {
+        $(".wrap-aside").load('sites/' + params.folder + '/aside_menu.html', function(response, status, xhr) {
             if(status == "error") {
                 $(".wrap-aside").html("");
             }
@@ -35,7 +35,7 @@ $.routes({'/': function(){$('.wrap-main').load('sites/home.html',function(respon
                 $('.wrap-main').load("404.html");
             }
         });
-        $(".wrap-aside").load('sites/' + params.folder + '/_aside_menu.html', function(response, status, xhr) {
+        $(".wrap-aside").load('sites/' + params.folder + '/aside_menu.html', function(response, status, xhr) {
             if(status == "error") {
                 $(".wrap-aside").html("");
             }
