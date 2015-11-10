@@ -124,7 +124,6 @@ body {
   line-height: 1.2em;
   font-weight: bold;
   margin-top: 30px;
-  text-transform: uppercase;
 }
 .wrap-main h2 {
   font-size: 1.6em;
@@ -172,6 +171,12 @@ body {
   margin-top: 0;
 }
 .wrap-main .red {
+  color: #dc143c;
+}
+.wrap-main a {
+  color: #3d5585;
+}
+.wrap-main a:hover {
   color: #dc143c;
 }
 .wrap-footer {
@@ -258,7 +263,6 @@ body {
   flex: 1 auto;
 }
 .left {
-  font-variant: small-caps;
   color: #dc143c;
   text-align: left;
   margin-right: .25em;
@@ -269,6 +273,9 @@ body {
   text-align: right;
   margin-left: .25em;
   line-height: 1.1em;
+}
+.small-caps {
+  font-variant: small-caps;
 }
 .rubric {
   font-size: 0.9em;
@@ -342,3 +349,5 @@ div.footnotes .fn {
   letter-spacing: -0.05em;
   margin-right: 1em;
 }
+
+/*# sourceMappingURL=style.css.map */
