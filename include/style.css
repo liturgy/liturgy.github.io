@@ -307,6 +307,9 @@ body {
 .r-margin {
   margin-right: .5em;
 }
+.l-margin {
+  margin-left: 20px;
+}
 /* FOOTNOTE */
 a.fn {
   color: #dc143c;
