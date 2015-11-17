@@ -362,9 +362,3 @@ div.footnotes .fn {
   font-size: .75em;
   bottom: .3em;
 }
-.list-num {
-  color: #dc143c;
-  display: inline-block;
-  text-align: left;
-  width: 20px;
-}
