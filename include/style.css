@@ -367,3 +367,6 @@ div.footnotes .fn {
   font-weight: bold;
   color: #dc143c;
 }
+.expanded {
+  letter-spacing: .12em;
+}
