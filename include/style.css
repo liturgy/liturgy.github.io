@@ -362,3 +362,7 @@ div.footnotes .fn {
   font-size: .75em;
   bottom: .3em;
 }
+.list-num {
+  padding-right: 2em;
+  font-weight: bold;
+}
