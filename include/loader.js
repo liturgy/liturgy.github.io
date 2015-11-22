@@ -4,6 +4,7 @@ $.routes({'/': function(){$('.wrap-main').load('sites/home.html',function(respon
                 $('.wrap-main').load("404.html");
             }
         });
+		Hyphenator.run();
     $.ajax({
         url: 'sites/' + params.folder +
         '/aside_menu.html',
@@ -32,6 +33,7 @@ $.routes({'/': function(){$('.wrap-main').load('sites/home.html',function(respon
                 $('.wrap-main').load("404.html");
             }
         });
+		Hyphenator.run();
         $.ajax({
             url: 'sites/' + params.folder +
             '/aside_menu.html',
@@ -61,6 +63,7 @@ $.routes({'/': function(){$('.wrap-main').load('sites/home.html',function(respon
                 $('.wrap-main').load("404.html");
             }
         });
+		Hyphenator.run();
         $.ajax({
             url: 'sites/' + params.folder +
             '/aside_menu.html',
