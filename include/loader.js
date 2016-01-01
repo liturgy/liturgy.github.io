@@ -6,14 +6,13 @@ $.routes({
 
     "/:folder/": function(param){
         $.ajax({
-            type: "POST",
+            type: "GET",
             url: "sites/"+param.folder+"/home.html",
             success: function(data){
                 $("#content").html(data);
                 loadAsideMenu(param);
             },
             error: function() {
-                console.log("ERROR 1!");
                 $("#content").load("404.html");
                 colorize();
             },
@@ -25,14 +24,13 @@ $.routes({
 
     "/:folder/:file": function(param){
         $.ajax({
-            type: "POST",
+            type: "GET",
             url: "sites/"+param.folder+"/"+param.file+".html",
             success: function(data){
                 $("#content").html(data);
                 loadAsideMenu(param);
             },
             error: function() {
-                console.log("ERROR 2!");
                 $("#content").load("404.html");
                 colorize();
             },
@@ -46,14 +44,13 @@ $.routes({
         if(lastVisitedURL.folder != param.folder ||
             lastVisitedURL.file != param.file) {
             $.ajax({
-                type: "POST",
+                type: "GET",
                 url: "sites/"+param.folder+"/"+param.file+".html",
                 success: function(data){
                     $("#content").html(data);
                     loadAsideMenu(param);
                 },
                 error: function() {
-                    console.log("ERROR 3!");
                     $("#content").load("404.html");
                     colorize();
                 },
@@ -70,14 +67,13 @@ $.routes({
 function loadHome(){
 
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: "sites/home/home.html",
         success: function(data){
             $("#content").html(data);
             loadAsideMenu({"folder": "/"});
         },
         error: function() {
-            console.log("ERROR 4!");
             $("#content").load("404.html");
             colorize();
         },
@@ -90,7 +86,7 @@ function loadHome(){
 function loadAsideMenu(param) {
     if(param.folder != lastVisitedURL.folder) {
         $.ajax({
-            method: "POST",
+            method: "GET",
             url: function () {
                 if (param.folder == "/") {
                     console.log("sites/home/aside_menu.html");
