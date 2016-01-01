@@ -7,13 +7,14 @@ $.routes({
     "/:folder/": function(param){
         $.ajax({
             type: "POST",
-            url: "/sites/"+param.folder+"/home.html",
+            url: "sites/"+param.folder+"/home.html",
             success: function(data){
                 $("#content").html(data);
                 loadAsideMenu(param);
             },
             error: function() {
-                $("#content").load("/404.html");
+                console.log("ERROR 1!");
+                $("#content").load("404.html");
                 colorize();
             },
             complete: function() {
@@ -25,13 +26,14 @@ $.routes({
     "/:folder/:file": function(param){
         $.ajax({
             type: "POST",
-            url: "/sites/"+param.folder+"/"+param.file+".html",
+            url: "sites/"+param.folder+"/"+param.file+".html",
             success: function(data){
                 $("#content").html(data);
                 loadAsideMenu(param);
             },
             error: function() {
-                $("#content").load("/404.html");
+                console.log("ERROR 2!");
+                $("#content").load("404.html");
                 colorize();
             },
             complete: function() {
@@ -45,13 +47,14 @@ $.routes({
             lastVisitedURL.file != param.file) {
             $.ajax({
                 type: "POST",
-                url: "/sites/"+param.folder+"/"+param.file+".html",
+                url: "sites/"+param.folder+"/"+param.file+".html",
                 success: function(data){
                     $("#content").html(data);
                     loadAsideMenu(param);
                 },
                 error: function() {
-                    $("#content").load("/404.html");
+                    console.log("ERROR 3!");
+                    $("#content").load("404.html");
                     colorize();
                 },
                 complete: function() {
@@ -68,13 +71,14 @@ function loadHome(){
 
     $.ajax({
         type: "POST",
-        url: "/sites/home/home.html",
+        url: "sites/home/home.html",
         success: function(data){
             $("#content").html(data);
             loadAsideMenu({"folder": "/"});
         },
         error: function() {
-            $("#content").load("/404.html");
+            console.log("ERROR 4!");
+            $("#content").load("404.html");
             colorize();
         },
         complete: function() {
